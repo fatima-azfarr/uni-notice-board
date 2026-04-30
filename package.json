@@ -1,0 +1,15 @@
+{
+  "name": "uni-notice-board",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "parcel build src/index.html src/notices.html src/exams.html src/admissions.html src/contact.html --dist-dir dist --no-optimize",
+    "lint:html": "htmlhint src/*.html",
+    "lint:css": "stylelint styles/*.css"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}
