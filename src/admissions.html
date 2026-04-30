@@ -2,15 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admissions - Uni Notice Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>COMSATS University - Admissions</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Admission Updates</h1>
-  <ul>
-    <li>Fall 2026 admissions open from June 1</li>
-    <li>Last date to apply: July 15, 2026</li>
-    <li>Merit list: August 1, 2026</li>
-  </ul>
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="comsats.webp"
+           onerror="this.style.display='none';document.getElementById('fb').style.display='flex';" alt="COMSATS Logo">
+      <div id="fb" class="logo-fallback">CUI</div>
+      <div class="logo-text">
+        <div class="logo-name">COMSATS</div>
+        <div class="logo-sub">Lahore Campus</div>
+      </div>
+    </div>
+    <div class="nav-group">
+  <div class="nav-group-label">Main</div>
+
+  <a href="index.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-home"></i></div>
+    <span class="nav-lbl">Home</span>
+  </a>
+
+  <a href="notices.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-clipboard-list"></i></div>
+    <span class="nav-lbl">Notices</span>
+    <span class="nav-badge">12</span>
+  </a>
+
+  <a href="exams.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-pen"></i></div>
+    <span class="nav-lbl">Exams</span>
+    <span class="nav-badge">5</span>
+  </a>
+
+  <a href="admissions.html" class="nav-item active">
+    <div class="nav-ic"><i class="fas fa-graduation-cap"></i></div>
+    <span class="nav-lbl">Admissions</span>
+  </a>
+
+  <a href="contact.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-phone"></i></div>
+    <span class="nav-lbl">Contact</span>
+  </a>
+</div>
+    
+    <div class="sidebar-footer">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-ic">◀</span>
+        <span class="toggle-lbl">Collapse</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="topbar-title">Admissions</div>
+      <div class="user-chip">
+        <div class="user-avatar">FA</div>
+        Fatima Azfar ▾
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="important-banner">
+        <div class="banner-left">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="banner-title">Fall 2026 Admissions</span>
+              <span class="unread-badge">Open</span>
+            </div>
+            <div class="banner-sub">Applications are open until June 30, 2026.</div>
+          </div>
+        </div>
+        <button class="show-all-btn btn-primary">Apply Now</button>
+      </div>
+
+      <div class="section-header">
+        <div class="section-title">Admission Updates</div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-tag tag-admission">Open</span>
+          <div class="card-title">Fall 2026 admissions are now open for all programs</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">Last date: Jun 30, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-notice">Merit List</span>
+          <div class="card-title">First merit list will be displayed on July 15, 2026</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">Jul 15, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-urgent">Required</span>
+          <div class="card-title">Documents: Matric, FSc certificates, CNIC, photos</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">Submit before deadline</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-notice">Fee</span>
+          <div class="card-title">Admission fee: PKR 25,000 non-refundable</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">On admission</span><span class="card-arrow">→</span></div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-bottom:1rem; margin-top:1rem;">Available Programs</div>
+      <table class="exam-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Duration</th>
+            <th>Seats</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BS Computer Science</td>
+            <td>4 Years</td>
+            <td>120</td>
+            <td><span class="row-tag tag-admission">Open</span></td>
+          </tr>
+          <tr>
+            <td>BS Software Engineering</td>
+            <td>4 Years</td>
+            <td>60</td>
+            <td><span class="row-tag tag-admission">Open</span></td>
+          </tr>
+          <tr>
+            <td>BS Electrical Engineering</td>
+            <td>4 Years</td>
+            <td>80</td>
+            <td><span class="row-tag tag-admission">Open</span></td>
+          </tr>
+          <tr>
+            <td>MS Computer Science</td>
+            <td>2 Years</td>
+            <td>40</td>
+            <td><span class="row-tag tag-notice">Limited</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>COMSATS University Islamabad, Lahore Campus &copy; 2026 — Defence Road, Off Raiwind Road</footer>
+  </div>
+
+</div>
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+    document.getElementById('main').classList.toggle('expanded');
+  }
+</script>
 </body>
 </html>

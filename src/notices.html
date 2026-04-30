@@ -2,15 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Notices - Uni Notice Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>COMSATS University - Notices</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Academic Notices</h1>
-  <ul>
-    <li>Mid-term exams start May 10, 2026</li>
-    <li>Fee submission deadline: May 5, 2026</li>
-    <li>Campus closed on May 1 for public holiday</li>
-  </ul>
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="comsats.webp"
+           onerror="this.style.display='none';document.getElementById('fb').style.display='flex';" alt="COMSATS Logo">
+      <div id="fb" class="logo-fallback">CUI</div>
+      <div class="logo-text">
+        <div class="logo-name">COMSATS</div>
+        <div class="logo-sub">Lahore Campus</div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Main</div>
+
+  <a href="index.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-home"></i></div>
+    <span class="nav-lbl">Home</span>
+  </a>
+
+  <a href="notices.html" class="nav-item">
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <div class="nav-ic"><i class="fas fa-clipboard-list"></i></div>
+    <span class="nav-lbl">Notices</span>
+    <span class="nav-badge">12</span>
+  </a>
+
+  <a href="exams.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-pen"></i></div>
+    <span class="nav-lbl">Exams</span>
+    <span class="nav-badge">5</span>
+  </a>
+
+  <a href="admissions.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-graduation-cap"></i></div>
+    <span class="nav-lbl">Admissions</span>
+  </a>
+
+  <a href="contact.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-phone"></i></div>
+    <span class="nav-lbl">Contact</span>
+  </a>
+</div>
+    
+    <div class="sidebar-footer">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-ic">◀</span>
+        <span class="toggle-lbl">Collapse</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="topbar-title">Notices</div>
+      <div class="user-chip">
+        <div class="user-avatar">FA</div>
+        Fatima Azfar ▾
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="important-banner">
+        <div class="banner-left">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="banner-title">Important Notices</span>
+              <span class="unread-badge">7 Unread</span>
+            </div>
+            <div class="banner-sub">From admin, registrar, and 3 more.</div>
+          </div>
+        </div>
+        <button class="show-all-btn btn-primary">Show all</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn">Date filter ▾</button>
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search notices...">
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-bottom:1rem;">All Notices</div>
+
+      <table class="notice-table">
+        <thead>
+          <tr>
+            <th style="width:20px;"></th>
+            <th>From</th>
+            <th>Title</th>
+            <th style="width:80px;">Tag</th>
+            <th style="width:80px;">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Admin</td>
+            <td class="title-col unread"><span class="notice-dot"></span>Semester registration deadline extended to May 10</td>
+            <td><span class="row-tag tag-urgent">Urgent</span></td>
+            <td>Today</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Exam Office</td>
+            <td class="title-col unread"><span class="notice-dot"></span>DevOps final exam — Block A, Room 101</td>
+            <td><span class="row-tag tag-exam">Exam</span></td>
+            <td>May 20</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Registrar</td>
+            <td class="title-col">Fee submission last date: May 15, 2026</td>
+            <td><span class="row-tag tag-notice">Notice</span></td>
+            <td>May 15</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Admissions</td>
+            <td class="title-col">Fall 2026 admissions are now open</td>
+            <td><span class="row-tag tag-admission">Admission</span></td>
+            <td>Jun 30</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Admin</td>
+            <td class="title-col">Mid-term result cards available from May 5</td>
+            <td><span class="row-tag tag-notice">Notice</span></td>
+            <td>May 5</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Exam Office</td>
+            <td class="title-col">Software Engineering exam — Block B, Room 203</td>
+            <td><span class="row-tag tag-exam">Exam</span></td>
+            <td>May 22</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" style="accent-color:#2563a8;"></td>
+            <td>Convocation</td>
+            <td class="title-col">Convocation ceremony scheduled for June 2026</td>
+            <td><span class="row-tag tag-notice">Notice</span></td>
+            <td>Jun 1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="page-btn">«</button>
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">›</button>
+        <button class="page-btn">»</button>
+      </div>
+    </div>
+
+    <footer>COMSATS University Islamabad, Lahore Campus &copy; 2026 — Defence Road, Off Raiwind Road</footer>
+  </div>
+
+</div>
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+    document.getElementById('main').classList.toggle('expanded');
+  }
+</script>
 </body>
 </html>

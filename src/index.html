@@ -3,37 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COMSATS Notice Board - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>COMSATS University - Notice Board</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
-  <header>
-    <h1>COMSATS University Digital Notice Board</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="exams.html">Exams</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>Welcome to the University Digital Notice Board</h2>
-    <p>Stay updated with the latest academic announcements, exam schedules, and admission notices.</p>
-    <section>
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="notices.html">Academic Notices</a></li>
-        <li><a href="exams.html">Examination Schedule</a></li>
-        <li><a href="admissions.html">Admission Updates</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>COMSATS University Islamabad, Lahore Campus &copy; 2026</p>
-  </footer>
+<body class="home">
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="comsats.webp"
+           onerror="this.style.display='none';document.getElementById('fb').style.display='flex';" alt="COMSATS Logo">
+      <div id="fb" class="logo-fallback">CUI</div>
+      <div class="logo-text">
+        <div class="logo-name">COMSATS</div>
+        <div class="logo-sub">Lahore Campus</div>
+      </div>
+    </div>
+    <div class="nav-group">
+  <div class="nav-group-label">Main</div>
+
+  <a href="index.html" class="nav-item active">
+    <div class="nav-ic"><i class="fas fa-home"></i></div>
+    <span class="nav-lbl">Home</span>
+  </a>
+
+  <a href="notices.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-clipboard-list"></i></div>
+    <span class="nav-lbl">Notices</span>
+    <span class="nav-badge">12</span>
+  </a>
+
+  <a href="exams.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-pen"></i></div>
+    <span class="nav-lbl">Exams</span>
+    <span class="nav-badge">5</span>
+  </a>
+
+  <a href="admissions.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-graduation-cap"></i></div>
+    <span class="nav-lbl">Admissions</span>
+  </a>
+
+  <a href="contact.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-phone"></i></div>
+    <span class="nav-lbl">Contact</span>
+  </a>
+</div>
+    <div class="sidebar-footer">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-ic">◀</span>
+        <span class="toggle-lbl">Collapse</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="topbar-title">Home</div>
+      <div class="user-chip">
+        <div class="user-avatar">FA</div>
+        Fatima Azfar ▾
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+      <div class="hero-circle c3"></div>
+      <div class="hero-badge">Lahore Campus — Fall 2026</div>
+      <h1>COMSATS University</h1>
+      <p>Stay updated with academic announcements, exam schedules, and admission notices — all in one place.</p>
+      <div class="hero-btns">
+        <a href="notices.html" class="btn-primary">View Notices</a>
+        <a href="exams.html" class="btn-primary">Exam Schedule</a>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Active notices</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Upcoming exams</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Admission updates</div></div>
+      <div class="stat"><div class="stat-num">2026</div><div class="stat-label">Current session</div></div>
+    </div>
+
+    <div class="content">
+      <div class="section-header">
+        <div class="section-title">Recent notices</div>
+        <a href="notices.html" class="see-all">See all →</a>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-tag tag-urgent">Urgent</span>
+          <div class="card-title">Semester registration deadline extended</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">May 10, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-exam">Exam</span>
+          <div class="card-title">DevOps final exam — Block A, Room 101</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">May 20, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-admission">Admission</span>
+          <div class="card-title">Fall 2026 admissions now open</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">Jun 30, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+        <div class="card">
+          <span class="card-tag tag-notice">Notice</span>
+          <div class="card-title">Fee submission last date: May 15</div>
+          <hr class="card-divider">
+          <div class="card-footer"><span class="card-date">May 15, 2026</span><span class="card-arrow">→</span></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>COMSATS University Islamabad, Lahore Campus &copy; 2026 — Defence Road, Off Raiwind Road</footer>
+  </div>
+
+</div>
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+    document.getElementById('main').classList.toggle('expanded');
+  }
+</script>
 </body>
 </html>

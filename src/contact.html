@@ -2,15 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - Uni Notice Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>COMSATS University - Contact</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Contact Us</h1>
-  <ul>
-    <li>Email: info@comsats.edu.pk</li>
-    <li>Phone: +92-42-111-001-007</li>
-    <li>Address: Defence Road, Lahore</li>
-  </ul>
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="comsats.webp"
+           onerror="this.style.display='none';document.getElementById('fb').style.display='flex';" alt="COMSATS Logo">
+      <div id="fb" class="logo-fallback">CUI</div>
+      <div class="logo-text">
+        <div class="logo-name">COMSATS</div>
+        <div class="logo-sub">Lahore Campus</div>
+      </div>
+    </div>
+    <div class="nav-group">
+  <div class="nav-group-label">Main</div>
+
+  <a href="index.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-home"></i></div>
+    <span class="nav-lbl">Home</span>
+  </a>
+
+  <a href="notices.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-clipboard-list"></i></div>
+    <span class="nav-lbl">Notices</span>
+    <span class="nav-badge">12</span>
+  </a>
+
+  <a href="exams.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-pen"></i></div>
+    <span class="nav-lbl">Exams</span>
+    <span class="nav-badge">5</span>
+  </a>
+
+  <a href="admissions.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-graduation-cap"></i></div>
+    <span class="nav-lbl">Admissions</span>
+  </a>
+
+  <a href="contact.html" class="nav-item active">
+    <div class="nav-ic"><i class="fas fa-phone"></i></div>
+    <span class="nav-lbl">Contact</span>
+  </a>
+</div>
+    
+    <div class="sidebar-footer">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-ic">◀</span>
+        <span class="toggle-lbl">Collapse</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="topbar-title">Contact</div>
+      <div class="user-chip">
+        <div class="user-avatar">FA</div>
+        Fatima Azfar ▾
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="important-banner">
+        <div class="banner-left">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="banner-title">Office Hours</span>
+              <span class="unread-badge">Open Now</span>
+            </div>
+            <div class="banner-sub">Monday to Friday, 9:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+        <button class="show-all-btn btn-primary">Send Email</button>
+      </div>
+
+      <div class="section-header">
+        <div class="section-title">Contact Information</div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Address</h3>
+          <p>Defence Road, Off Raiwind Road<br>Lahore, Punjab, Pakistan</p>
+        </div>
+        <div class="contact-card">
+          <h3>Phone</h3>
+          <p>+92-42-111-001-007<br>+92-42-35941146</p>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>info@cuilahore.edu.pk<br>admissions@cuilahore.edu.pk</p>
+        </div>
+        <div class="contact-card">
+          <h3>Office Hours</h3>
+          <p>Monday – Friday<br>9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:1.5rem; margin-bottom:1rem;">Departments</div>
+      <table class="exam-table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Head</th>
+            <th>Email</th>
+            <th>Extension</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Computer Science</td>
+            <td>Dr. Ahmad Raza</td>
+            <td>cs@cuilahore.edu.pk</td>
+            <td>Ext. 101</td>
+          </tr>
+          <tr>
+            <td>Software Engineering</td>
+            <td>Dr. Sara Khan</td>
+            <td>se@cuilahore.edu.pk</td>
+            <td>Ext. 102</td>
+          </tr>
+          <tr>
+            <td>Electrical Engineering</td>
+            <td>Dr. Usman Ali</td>
+            <td>ee@cuilahore.edu.pk</td>
+            <td>Ext. 103</td>
+          </tr>
+          <tr>
+            <td>Registrar Office</td>
+            <td>Mr. Tariq Mahmood</td>
+            <td>registrar@cuilahore.edu.pk</td>
+            <td>Ext. 200</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>COMSATS University Islamabad, Lahore Campus &copy; 2026 — Defence Road, Off Raiwind Road</footer>
+  </div>
+
+</div>
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+    document.getElementById('main').classList.toggle('expanded');
+  }
+</script>
 </body>
 </html>

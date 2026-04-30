@@ -2,15 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Exams - Uni Notice Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMSATS University - Exams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <h1>Exam Schedules</h1>
-  <ul>
-    <li>Mathematics - May 15, 2026</li>
-    <li>Physics - May 17, 2026</li>
-    <li>DevOps - May 20, 2026</li>
-  </ul>
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="comsats.webp"
+           onerror="this.style.display='none';document.getElementById('fb').style.display='flex';" alt="COMSATS Logo">
+      <div id="fb" class="logo-fallback">CUI</div>
+      <div class="logo-text">
+        <div class="logo-name">COMSATS</div>
+        <div class="logo-sub">Lahore Campus</div>
+      </div>
+    </div>
+    <div class="nav-group">
+  <div class="nav-group-label">Main</div>
+
+  <a href="index.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-home"></i></div>
+    <span class="nav-lbl">Home</span>
+  </a>
+
+  <a href="notices.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-clipboard-list"></i></div>
+    <span class="nav-lbl">Notices</span>
+    <span class="nav-badge">12</span>
+  </a>
+
+  <a href="exams.html" class="nav-item active">
+    <div class="nav-ic"><i class="fas fa-pen"></i></div>
+    <span class="nav-lbl">Exams</span>
+    <span class="nav-badge">5</span>
+  </a>
+
+  <a href="admissions.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-graduation-cap"></i></div>
+    <span class="nav-lbl">Admissions</span>
+  </a>
+
+  <a href="contact.html" class="nav-item">
+    <div class="nav-ic"><i class="fas fa-phone"></i></div>
+    <span class="nav-lbl">Contact</span>
+  </a>
+</div>
+    
+    <div class="sidebar-footer">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-ic">◀</span>
+        <span class="toggle-lbl">Collapse</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="topbar-title">Exam Schedule</div>
+      <div class="user-chip">
+        <div class="user-avatar">FA</div>
+        Fatima Azfar ▾
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="important-banner">
+        <div class="banner-left">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="banner-title">Final Term Exams</span>
+              <span class="unread-badge">5 Upcoming</span>
+            </div>
+            <div class="banner-sub">Spring 2026 final exams starting May 20.</div>
+          </div>
+        </div>
+        <button class="show-all-btn btn-primary">Download Schedule</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn">Department ▾</button>
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search courses...">
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-bottom:1rem;">All Exams</div>
+
+      <table class="exam-table">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Venue</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DevOps for Cloud Computing</td>
+            <td>May 20, 2026</td>
+            <td>09:00 AM</td>
+            <td>Block A, Room 101</td>
+            <td><span class="row-tag tag-urgent">Upcoming</span></td>
+          </tr>
+          <tr>
+            <td>Software Engineering</td>
+            <td>May 22, 2026</td>
+            <td>11:00 AM</td>
+            <td>Block B, Room 203</td>
+            <td><span class="row-tag tag-urgent">Upcoming</span></td>
+          </tr>
+          <tr>
+            <td>Computer Networks</td>
+            <td>May 24, 2026</td>
+            <td>02:00 PM</td>
+            <td>Block C, Room 305</td>
+            <td><span class="row-tag tag-urgent">Upcoming</span></td>
+          </tr>
+          <tr>
+            <td>Database Systems</td>
+            <td>May 26, 2026</td>
+            <td>09:00 AM</td>
+            <td>Block A, Room 102</td>
+            <td><span class="row-tag tag-notice">Scheduled</span></td>
+          </tr>
+          <tr>
+            <td>Operating Systems</td>
+            <td>May 28, 2026</td>
+            <td>11:00 AM</td>
+            <td>Block D, Room 401</td>
+            <td><span class="row-tag tag-notice">Scheduled</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="page-btn">«</button>
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">›</button>
+        <button class="page-btn">»</button>
+      </div>
+    </div>
+
+    <footer>COMSATS University Islamabad, Lahore Campus &copy; 2026 — Defence Road, Off Raiwind Road</footer>
+  </div>
+
+</div>
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+    document.getElementById('main').classList.toggle('expanded');
+  }
+</script>
 </body>
 </html>
